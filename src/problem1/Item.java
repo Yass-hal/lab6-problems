@@ -3,8 +3,8 @@ package problem1;
 public class Item {
     private String name;
     private double price;
-    private double quantity;
-    public Item(String name,double price,double quantity){
+    private int quantity;
+    public Item(String name,double price,int quantity){
         this.name=name;
         this.price=price;
         this.quantity=quantity;
@@ -18,7 +18,7 @@ public class Item {
         this.price = price;
     }
 
-    public void setQuantity(double quantity) {
+    public void setQuantity(int quantity) {
         this.quantity = quantity;
     }
 
@@ -30,7 +30,11 @@ public class Item {
         return price;
     }
 
-    public double getQuantity() {
+    public int getQuantity() {
         return quantity;
     }
+    public String toString(){
+        return String.format("Name: %s Quantity: %d Price: %.2f",name,quantity,price);
+    }
+
 }

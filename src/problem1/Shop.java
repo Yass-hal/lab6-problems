@@ -11,24 +11,31 @@ public class Shop
         String itemName;
         double itemPrice;
         int quantity;
+        double totalPrice;
         Scanner scan = new Scanner(System.in);
         String keepShopping = "y";
         do
-        {
+        {   totalPrice=0;
             System.out.print ("Enter the name of the item: ");
             itemName = scan.nextLine();
             System.out.print ("Enter the unit price: ");
             itemPrice = scan.nextDouble();
             System.out.print ("Enter the quantity: ");
             quantity = scan.nextInt();
+            scan.nextLine();
 // *** create a new item and add it to the cart
             item=new Item(itemName,itemPrice,quantity);
             cart.add(item);
             // *** print the contents of the cart object using println
-            System.out.println(cart.toString());
+            for (Item i:cart){
+                System.out.println(i.toString());
+                totalPrice+=i.getPrice()* i.getQuantity();
+            }
+
             System.out.print ("Continue shopping (y/n)? ");
             keepShopping = scan.nextLine();
         }
         while (keepShopping.equals("y"));
+        System.out.println("Total price: "+totalPrice);
     }
 }
