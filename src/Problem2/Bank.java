@@ -36,8 +36,8 @@ public class Bank {
                 for (Double transaction:c.getTransactions()){
                     double transac=transaction;
                     System.out.println(transac);
-                    return;
                 }
+                return;
             }
         }
         System.out.println("Customer not found");

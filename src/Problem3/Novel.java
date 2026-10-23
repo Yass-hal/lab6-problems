@@ -7,4 +7,11 @@ public class Novel extends Book{
         this.price=price;
     }
 
+    public double getPrice() {
+        return price;
+    }
+
+    public String toString() {
+        return super.toString() + " Price: " + price;
+    }
 }

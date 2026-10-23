@@ -7,4 +7,12 @@ public class Dictionary extends Document{
         this.language=language;
     }
 
+    public String getLanguage() {
+        return language;
+    }
+
+    public String toString() {
+        return super.toString() + " Language: " + language;
+    }
+
 }

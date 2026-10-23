@@ -21,4 +21,8 @@ public class Document {
     public String getTitle() {
         return title;
     }
+
+    public String toString() {
+        return "Document number: " + numRec + " Title: " + title;
+    }
 }

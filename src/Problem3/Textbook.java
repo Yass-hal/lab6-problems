@@ -6,4 +6,12 @@ public class Textbook extends Book{
         super(title,author,nbrPages);
         this.level=level;
     }
+
+    public String getLevel() {
+        return level;
+    }
+
+    public String toString() {
+        return super.toString() + " Level: " + level;
+    }
 }

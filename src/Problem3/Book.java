@@ -9,4 +9,16 @@ public class Book extends Document{
         this.nbrPages=nbrPages;
     }
 
+    public String getAuthor() {
+        return author;
+    }
+
+    public int getNbrPages() {
+        return nbrPages;
+    }
+
+    public String toString() {
+        return super.toString() + " Author: " + author + " Pages: " + nbrPages;
+    }
+
 }

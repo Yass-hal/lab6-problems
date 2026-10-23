@@ -9,7 +9,7 @@ public class Library {
         this.capacity=capacity;
         documents=new ArrayList<>();
     }
-    public void Display(){
+    public void displayDocument(){
         for (Document document:documents){
             System.out.println(document.getTitle());
         }
@@ -22,10 +22,23 @@ public class Library {
         return documents.remove(document);
     }
     public Document document(int numRec){
-
+        for (Document doc : documents) {
+            if (doc.getNumRec() == numRec) {
+                return doc;
+            }
+        }
+        return null;
+    }
+    public void displayAuthors(){
+        for (Document doc : documents) {
+            if (doc instanceof Book) {
+                Book book = (Book) doc;
+                System.out.println(book.getAuthor());
+            }
+        }
     }
 
 
-
-
+    public void displayDocuments() {
+    }
 }
