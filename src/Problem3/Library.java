@@ -9,14 +9,18 @@ public class Library {
         this.capacity=capacity;
         documents=new ArrayList<>();
     }
-    public void displayDocument(){
+    public void displayDocuments(){
         for (Document document:documents){
             System.out.println(document.getTitle());
         }
 
     }
     public boolean add(Document document){
-        return documents.add(document);
+
+        if (documents.size()<capacity){
+            return documents.add(document);
+        }
+        return false;
     }
     public boolean delete(Document document){
         return documents.remove(document);
@@ -38,7 +42,4 @@ public class Library {
         }
     }
 
-
-    public void displayDocuments() {
-    }
 }
